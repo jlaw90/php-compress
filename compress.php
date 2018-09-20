@@ -25,7 +25,7 @@ $_path = $_SERVER['DOCUMENT_ROOT'] . urldecode((defined($_SERVER['REQUEST_URL'])
 if($_path == __FILE__)
     die('You can\'t access compress.php through compress.php :O');
 
-// SEE ABOVE: PHP SUCKS, DOESN'T ALWAYS GET THE CORRECT MIMETYPE AND IS IN FACT DEPRECATED!!!!
+// Update: no longer deprecated in PHP 7
 $_ftype = mime_content_type($_path);
 if (defined('DEBUGGING'))
     print('<span>path:' . $_path . ',mime: ' . $_ftype . '</span><br/>');
